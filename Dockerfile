@@ -3,7 +3,7 @@ FROM openjdk:8-jre-alpine
 LABEL maintainer="Mitchel Haan <mitchel@mhstud.io>"
 LABEL description="UniFi Controller container based on Alpine Linux"
 
-RUN apk add --no-cache curl mongodb tini
+RUN apk add --no-cache curl mongodb java-snappy libc6-compat tini
 
 ARG UNIFI_VERSION=5.5.24
 ARG UNIFI_SHA512=aaf8ce0679d7b9605e10c717efe8b676638891f15916e75003d897881ba6df5dcebb2818df769164efcb6e97265a2fdccaea34638a62e2fc6bb0072e12e78ba3
