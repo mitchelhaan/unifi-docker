@@ -1,0 +1,12 @@
+[Unit]
+Description=UniFi Controller container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm --name unifi-controller --network host -v unifi:/unifi --tmpfs /run mitchelhaan/unifi-docker:5.5.24
+ExecStop=/usr/bin/docker stop unifi-controller
+
+[Install]
+WantedBy=multi-user.target
