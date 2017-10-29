@@ -5,7 +5,7 @@ UniFi Controller docker image based on Alpine Linux
 ## Building
 
 ```
-$ docker build https://github.com/mitchelhaan/unifi-docker.git#5.5.24
+$ docker build https://github.com/mitchelhaan/unifi-docker.git#5.5.24 -t mitchelhaan/unifi-docker:5.5.24
 ```
 
 ## Running
