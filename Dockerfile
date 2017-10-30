@@ -5,12 +5,12 @@ LABEL description="UniFi Controller container based on Alpine Linux"
 
 RUN apk add --no-cache curl mongodb java-snappy libc6-compat tini
 
-ARG UNIFI_VERSION=5.5.24
-ARG UNIFI_SHA512=aaf8ce0679d7b9605e10c717efe8b676638891f15916e75003d897881ba6df5dcebb2818df769164efcb6e97265a2fdccaea34638a62e2fc6bb0072e12e78ba3
-ENV UNIFI_ZIP=UniFi.unix.zip
+ARG UNIFI_VERSION=5.6.20
+ARG UNIFI_SHA256=cadacb5e3ada7a38f3ba4862aab8c93a0e2d7aea9dd27465f5083eae044a2910
+ARG UNIFI_ZIP=UniFi.unix.zip
 
 # Retrieve the installation file
-RUN curl https://dl.ubnt.com/unifi/$UNIFI_VERSION/$UNIFI_ZIP -o /tmp/$UNIFI_ZIP && echo "$UNIFI_SHA512  /tmp/$UNIFI_ZIP" | sha512sum -c -
+RUN curl https://dl.ubnt.com/unifi/$UNIFI_VERSION/$UNIFI_ZIP -o /tmp/$UNIFI_ZIP && echo "$UNIFI_SHA256  /tmp/$UNIFI_ZIP" | sha256sum -c -
 #COPY UniFi.unix.zip /tmp
 
 RUN unzip /tmp/$UNIFI_ZIP -d /tmp && rm /tmp/$UNIFI_ZIP
