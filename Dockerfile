@@ -5,8 +5,8 @@ LABEL description="UniFi Controller container based on Alpine Linux"
 
 RUN apk add --no-cache curl mongodb java-snappy libc6-compat tini
 
-ARG UNIFI_VERSION=5.6.26
-ARG UNIFI_SHA256=eb39748eb1a54c76dc9630b758f8b9b28f4d612afbb6097f394ff732e923aab9
+ARG UNIFI_VERSION=5.6.29
+ARG UNIFI_SHA256=917b7edcfdb64c365861bb0702e19348aa538e4cae3ac2188a25aa7161379afe
 ARG UNIFI_ZIP=UniFi.unix.zip
 
 # Retrieve the installation file
