@@ -24,7 +24,7 @@ RUN ln -sf /unifi/data /unifi/logs $BASEDIR/
 # Copy in the Docker helper scripts
 COPY run.sh healthcheck.sh $BASEDIR/
 
-EXPOSE 6789/tcp 8080/tcp 8443/tcp 8880/tcp 8843/tcp 3478/udp 10001/udp
+EXPOSE 8080/tcp 8443/tcp 8880/tcp 8843/tcp 6789/tcp 3478/udp 5656-5699/udp 10001/udp
 VOLUME /unifi
 
 WORKDIR $BASEDIR
