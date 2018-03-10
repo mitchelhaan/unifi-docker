@@ -7,7 +7,7 @@ The built image size is under 500MB.
 ## Building
 
 ```
-docker build https://github.com/mitchelhaan/unifi-docker.git#5.6.x -t mitchelhaan/unifi-docker:latest
+docker build https://github.com/mitchelhaan/unifi-docker.git#5.7.x -t mitchelhaan/unifi-docker:latest
 ```
 
 ## Running
